@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MAP Architecture Planning & Design</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--primary:#0d2b45;
+--accent:#1b4965;
+--highlight:#ff7a00;
+--white:#fff;
+--light:#eef3f8;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+font-family:'Poppins',sans-serif;
+background:var(--primary);
+color:white;
+scroll-behavior:smooth;
+}
+
+/* NAV */
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(13,43,69,0.95);
+padding:15px;
+text-align:center;
+z-index:1000;
+}
+
+nav a{
+margin:0 15px;
+color:white;
+text-decoration:none;
+font-weight:600;
+}
+
+nav a:hover{color:var(--highlight);}
+
+/* HERO */
+header{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),url('images/project1.jpg') center/cover;
+}
+
+header h1{
+font-size:50px;
+}
+
+header p{
+margin-top:10px;
+font-size:20px;
+opacity:.9;
+}
+
+.btn{
+margin-top:25px;
+padding:14px 35px;
+background:var(--highlight);
+border-radius:30px;
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+.btn:hover{background:#ff5500;}
+
+/* SECTION */
+section{
+padding:80px 20px;
+max-width:1100px;
+margin:auto;
+}
+
+h2{
+text-align:center;
+margin-bottom:40px;
+}
+
+/* SERVICES */
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+color:#222;
+padding:25px;
+border-radius:15px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+/* PROJECTS */
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+border-radius:15px;
+transition:.3s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+/* TESTIMONIAL */
+.testimonial{
+background:white;
+color:#333;
+padding:25px;
+border-radius:15px;
+margin-bottom:20px;
+}
+
+/* FAQ */
+.faq{
+background:white;
+color:#333;
+padding:20px;
+margin-bottom:10px;
+border-radius:10px;
+}
+
+/* CONTACT */
+.contact{
+background:white;
+color:#333;
+padding:30px;
+border-radius:20px;
+text-align:center;
+}
+
+input,textarea{
+width:90%;
+padding:12px;
+margin:10px;
+border-radius:8px;
+border:none;
+}
+
+button{
+padding:12px 30px;
+background:var(--primary);
+color:white;
+border:none;
+border-radius:25px;
+cursor:pointer;
+}
+
+/* FLOAT BUTTONS */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:12px 20px;
+border-radius:30px;
+text-decoration:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#projects">Projects</a>
+<a href="#testimonials">Reviews</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<header>
+<h1>MAP Architecture Planning & Design</h1>
+<p>Modern House Planning | 3D Design | BIM Solutions</p>
+<a href="#contact" class="btn">Get Free Consultation</a>
+</header>
+
+<section id="about">
+<h2>About Us</h2>
+<p style="text-align:center;">
+We provide professional house planning, AutoCAD drafting, and Revit BIM modeling 
+with modern design standards and engineering accuracy.
+</p>
+</section>
+
+<section id="services">
+<h2>Our Services</h2>
+<div class="services">
+<div class="card">2D House Planning</div>
+<div class="card">3D Elevation Design</div>
+<div class="card">AutoCAD Drafting</div>
+<div class="card">Revit BIM Modeling</div>
+<div class="card">Structural Layout</div>
+<div class="card">Construction Planning</div>
+</div>
+</section>
+
+<section id="projects">
+<h2>Our Projects</h2>
+<div class="gallery">
+<img src="images/project1.jpg">
+<img src="images/project2.jpg">
+<img src="images/project3.jpg">
+</div>
+</section>
+
+<section id="testimonials">
+<h2>Client Reviews</h2>
+
+<div class="testimonial">
+"Very professional planning and fast delivery. Highly recommended!"
+</div>
+
+<div class="testimonial">
+"Best 3D elevation design I received for my house."
+</div>
+
+</section>
+
+<section>
+<h2>FAQ</h2>
+
+<div class="faq">How much cost for house plan? → Depends on plot size.</div>
+<div class="faq">Do you provide 3D design? → Yes.</div>
+<div class="faq">How fast delivery? → 2–5 days.</div>
+
+</section>
+
+<section id="contact">
+<h2>Start Your Project</h2>
+
+<div class="contact">
+<form action="https://formsubmit.co/mapdesignstudioinmani@gmail.com" method="POST">
+
+<input type="text" name="Name" placeholder="Your Name" required>
+<input type="tel" name="Phone" placeholder="Phone Number" required>
+<input type="text" name="Plot" placeholder="Plot Size" required>
+
+<textarea name="Requirement" placeholder="Your Requirement"></textarea>
+
+<button type="submit">Submit</button>
+
+</form>
+</div>
+
+</section>
+
+<a class="whatsapp" href="https://wa.me/919133650643?text=Hi%20I%20need%20house%20plan">
+WhatsApp
+</a>
+
+</body>
+</html>
